@@ -1,0 +1,25 @@
+.header {
+    &__img {
+        position: relative;
+        max-width: 100%;
+        height: 518px;
+        background-image: url(../img/intro.jpg); //для изображения нужно всегда задавать width и height,чтобы оно загружалось
+        background-repeat: no-repeat;
+        background-position: center; //ставим для фона: всегда по центру
+        background-size: cover;
+    }
+    &__img-text {
+        position: absolute;
+        top: 90px;
+        width: 100%;
+        height: 214px;
+        background-image: url(../img/intro_text.svg);
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: contain;
+        @include tablet {
+            top: 77px;
+            height: 350px;
+        }
+    }
+}

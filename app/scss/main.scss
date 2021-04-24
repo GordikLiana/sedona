@@ -1,0 +1,10 @@
+@import "variables"; 
+
+@import "reset"; 
+@import "mixins"; 
+
+//подключаем основные стили сайта(блоки)
+@import "blocks/header";
+@import "blocks/container";
+@import "blocks/body";
+@import "blocks/menu";
