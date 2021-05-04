@@ -154,6 +154,11 @@
             padding: 41px 40px 40px 33px;
         }
     }
+    &__img-text--text:after {
+        @include tablet{
+            display: none;
+        }
+    }
     &__img-text--text:last-child {
         &:after {
             display: none;
