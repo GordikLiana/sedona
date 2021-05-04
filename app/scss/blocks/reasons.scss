@@ -1,0 +1,233 @@
+.reasons {
+    &__head {
+        padding: 32px 20px 27px 20px;
+        background-color: $second-color;
+        @include tablet {
+            padding: 44px 20px 55px 20px;
+        }
+        @include desktop {
+            padding: 55px 20px 41px 20px;
+        }
+    }
+    &__none {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+    &__title {
+        padding: 0 11px;
+        @include font(18px, 26px, 700);
+        text-transform: uppercase;
+        text-align: center;
+        color: $third-color;
+        @include tablet {
+            @include font(21px, 26px, 700);
+        }
+    }
+    &__five {
+        padding-top: 35px;
+        @include font(14px, 26px, 400);
+        text-transform: uppercase;
+        text-align: center;
+        color: #333333;
+    }
+    &__blue {
+        background-color: $font-color;
+        padding: 58px 0 36px 0;
+        @include tablet {
+            padding: 43px 20px;
+            width: 50%;
+        }
+        @include desktop {
+            width: 48%;
+        }
+    }
+    &__blue--down {
+        padding: 39px 20px 35px 20px;
+        @include tablet {
+            order: 2;
+            padding-left: 30px;
+            padding-right: 38px;
+        }
+    }
+    &__blue--gray {
+        padding: 0;
+        background-color: #eeeeee;
+        width: 100%;
+    }
+    &__blue-title {
+        padding: 0 20px 14px;
+        @include font(18px, 26px, 700);
+        color: $second-color;
+        text-transform: uppercase;
+        text-align: center;
+        @include tablet {
+            @include font(21px, 21px, 700);
+        }
+        @include desktop {
+            padding: 0 92px 14px;
+        }
+    }
+    &__blue-title--black {
+        color: $third-color;
+        @include tablet {
+            @include font(21px, 21px, 700);
+        }
+    }
+    &__blue-number {
+        position: relative;
+        padding: 0 20px;
+        @include font(14px, 21px, 400);
+        color: $second-color;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 24px;
+        &:after,
+        &:before {
+            content: "";
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 6px;
+            height: 1px;
+            background: $second-color;
+        }
+        &:after {
+            margin-right: -100%;
+            left: 6px;
+        }
+        &:before {
+            margin-left: -100%;
+            left: -6px;
+        }
+    }
+    &__blue-number--black {
+        padding: 0 11px 20px;
+        color: $third-color;
+        &:after,
+        &:before {
+            background: #333333;
+        }
+    }
+    &__blue-text {
+        padding: 0 11px;
+        @include font(14px, 21px, 400);
+        color: $second-color;
+        text-transform: uppercase;
+        text-align: center;
+        @include tablet {
+            padding: 0;
+        }
+        @include desktop {
+            padding: 0 40px;
+        }
+    }
+    &__blue-text--black {
+        color: #333333;
+        padding: 0 2px;
+    }
+    &__img-text,
+    &__rest {
+        @include tablet {
+            display: flex;
+        }
+    }
+    &__img-text {
+    }
+    &__img-text--text {
+        padding: 25px 0;
+        position: relative;
+        background-color: #eeeeee;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #d6d6d6;
+        }
+        @include tablet {
+            width: 33.33%;
+            padding: 41px 40px 40px 33px;
+        }
+    }
+    &__img-text--text:last-child {
+        &:after {
+            display: none;
+        }
+    }
+    &__home {
+        width: 100%;
+        height: 260px;
+        background: url(/img/home.jpg) no-repeat center center/cover;
+    }
+    &__home--bridge {
+        background: url(/img/bridge.jpg) no-repeat center center/cover;
+    }
+    &__plus {
+        display: flex;
+        align-items: flex-start;
+        padding: 0 20px;
+        &:first-child {
+            padding-top: 9px;
+        }
+        &:last-child {
+            padding-bottom: 35px;
+        }
+        @include tablet {
+            flex-direction: column;
+            width: 33.33%;
+            padding: 60px 13px 59px;
+            &:last-child,
+            &:first-child {
+                padding: 60px 13px 59px;
+            }
+        }
+    }
+    &__plus--order {
+        @include tablet {
+            order: 3;
+        }
+    }
+    &__wrapper {
+        display: block;
+        padding-left: 9px;
+    }
+    &__wrapper-title {
+        padding: 26px 0 18px;
+        @include font(18px, 26px, 700);
+        color: $third-color;
+        text-transform: uppercase;
+        @include tablet {
+            text-align: center;
+            @include font(21px, 21px, 700);
+            padding-bottom: 25px;
+        }
+    }
+    &__wrapper-text {
+        @include font(14px, 21px, 400);
+        color: #333333;
+        text-transform: uppercase;
+        @include tablet {
+            text-align: center;
+            padding: 0 14px;
+        }
+    }
+    &__plus-mini {
+        padding-top: 15px;
+        padding-bottom: 26px;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__plus-normal {
+        display: none;
+        @include tablet {
+            display: block;
+            margin: auto;
+        }
+    }
+}

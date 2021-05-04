@@ -1,30 +1,32 @@
 .menu {
+    padding: 0 20px;
     height: 56px;
-    position: fixed;
     background-color: $second-color;
     display: flex;
     justify-content: flex-end;
     align-items: center; 
-    position: relative;
     &__logo {
-        margin: 0 auto;
-        margin-top: 32px;
-        position: relative;
-    }
-    &__logo-img {
-        z-index: 999;
-        position: relative;
-        margin-left: 26px;
-    }
-    &__triangle{
-        display: none;
         position: absolute;
-        @include desktop{
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: 3;
+        &:after {
+            position: absolute;
+            left: 50%;
             top: 0;
-            left: -19px;
+            transform: translateX(-50%);
+            content: "";
             display: block;
-            margin: 0 auto;
-            z-index: 99;
+            width: 102px;
+            height: 84px;
+            background: url(../img/logo.svg) no-repeat center center/cover ; 
+        }
+    }
+    &__logo-img{
+        display: none;
+        @include desktop {
+            display: block;
         }
     }
     &__burger {
@@ -62,27 +64,31 @@
         }    
     }
     &__nav {
-        position: fixed;
+        position: absolute;
         z-index: 1;
-        width: 100%;
-        display: block;
+        display: none;
         top: 56px;
         right: 0;  
+        left: 0;
         background-color: $font-color;
-        // opacity: 0;
-        // transform: translateX(100%);
-        position: fixed;
+        opacity: 0;
+        transform: translateX(100%);
         transition: opacity .2s ease-in, transform .2s ease-in;
         @include tablet {
+            display: block;
+            opacity: 1;
+            transform: translateX(0);
             top: 0;
             background-color: $second-color;
         }
     }
     &__nav--active {
-            opacity: 1;
-            transform: translateX(0);
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
     }
     &__list {
+        position: relative;
         width: 100%;
         list-style-type: none; 
         display: block;
@@ -92,14 +98,48 @@
             justify-content: space-between;
             align-items: center;
         }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 7px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+        }
+    }
+    &__list:after {
+        @include tablet{
+            display: none;
+        }
     }
     &__item {
-        box-shadow: 0px -3px 0px rgba(1, 1, 1, 0.2);
+        position: relative;
         @include tablet {
-            min-width: 153px;
-            flex-shrink: 0; //флекс шринк ,отменяет сужение элемента,при уменьшении размера экрана
+            width: 20%;
+            flex-shrink: 0;
             flex-grow: 1;
+            &:nth-child(2) {
+                margin-right: 20%;
+            }
         }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid $font-color;
+            box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+        } 
+    }
+    &__item:after {
+        @include tablet{
+            display: none;
+        }
+    }
+    &__item:last-child:after {
+        display: none;
     }
     &__link {
         display: block;
@@ -109,7 +149,6 @@
         text-transform: uppercase;
         color: $second-color;
         text-decoration: none; 
-        border-bottom: 1px solid $second-color;
         @include tablet {
             @include font(14px, 26px,700);
             color: $third-color;
