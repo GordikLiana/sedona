@@ -31,6 +31,8 @@
     }
     &__burger {
         display: flex;
+        border: 0;
+        background-color: $second-color;
         margin: 12px 0;
         width: 32px; 
         height: 32px;
