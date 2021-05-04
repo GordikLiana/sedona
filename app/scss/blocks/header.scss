@@ -7,8 +7,7 @@
         bottom: 0;
         content: "";
         display: block;
-        width: 100%;
-        height: 57px;
+        @include box (100%, 57px);
         background: url(../img/down.svg) no-repeat center center/cover ; 
     }
     &__img {
@@ -18,8 +17,7 @@
         background: url(../img/intro.jpg)no-repeat center center/cover ;
     }
     &__img-text {
-        width: 100%;
-        height: 214px;
+        @include box (100%, 214px);
         background: url(../img/intro_text.svg) no-repeat center center/contain;
         @include tablet {
             height: 350px;

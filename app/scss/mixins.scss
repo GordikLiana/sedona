@@ -16,3 +16,7 @@
         @content;
     }
 }
+@mixin box ($width, $heigh: $width){
+    width: $width;
+    height: $heigh;
+}

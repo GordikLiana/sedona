@@ -18,8 +18,7 @@
             transform: translateX(-50%);
             content: "";
             display: block;
-            width: 102px;
-            height: 84px;
+            @include box (102px, 84px);
             background: url(../img/logo.svg) no-repeat center center/cover ; 
         }
     }
@@ -34,8 +33,7 @@
         border: 0;
         background-color: $second-color;
         margin: 12px 0;
-        width: 32px; 
-        height: 32px;
+        @include box (32px);
         align-items: center;
         justify-content: center;
         flex-direction: column; 
@@ -47,10 +45,9 @@
         }
     }
     &__burger-liner {
-        width: 22px;
+        @include box (22px, 4px);
         display: block;
         margin-top: 5px;
-        height: 4px;
         background-color: $font-color;
     }
     &__burger-liner-active {
@@ -95,7 +92,6 @@
         list-style-type: none; 
         display: block;
         @include tablet {
-            min-width: 768px;
             display: flex;
             justify-content: space-between;
             align-items: center;

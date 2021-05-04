@@ -34,8 +34,7 @@
     }
     &__item {
         margin-left: 6px;
-        width: 46px;
-        height: 48px;
+        @include box (46px, 48px);
         background-color: $font-color;
     }
     &__item-img {
