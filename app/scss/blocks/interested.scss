@@ -1,8 +1,15 @@
 .interested {
-    padding: 33px 29px 27px 30px;
+    padding-top: 33px;
+    padding-bottom: 30px;
     @include tablet {
         padding-top: 58px;
         padding-bottom: 59px;
+    }
+    &__none {
+        display: none;
+        @include tablet {
+            display: block;
+        }
     }
     &__title {
         @include font(21px, 26px, 700);
@@ -18,12 +25,19 @@
         text-align: center;
         text-transform: uppercase;
         color: #333333;
+        padding-left: 27px;
+        max-width: 299px;
         padding-bottom: 27px;
         @include tablet {
             padding-bottom: 37px;
+            padding-left: 0;
+            display: block;
+            margin: 0 auto;
+            max-width: 453px;
         }
     }
     &__btn {
+        position: relative;
         display: block;
         margin: 0 auto;
         @include box (280px, 58px);
@@ -32,9 +46,27 @@
         @include font(21px, 24px, 700);
         text-align: center;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: $second-color;
         @include tablet {
             width: 458px;
+        }
+        &:hover {
+            background-color: #669EC0;
+        }
+        &:active {
+            background-color: #5496BD;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include box (280px, 58px);
+                background-color: #5496BD;;
+                opacity: .3;
+                @include tablet {
+                    width: 458px;
+                }
+            }
         }
     }
 }

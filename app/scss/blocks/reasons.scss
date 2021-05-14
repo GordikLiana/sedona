@@ -197,6 +197,9 @@
     &__wrapper {
         display: block;
         padding-left: 9px;
+        @include tablet {
+            display: none;
+        }
     }
     &__wrapper-title {
         padding: 26px 0 18px;
@@ -204,18 +207,28 @@
         color: $third-color;
         text-transform: uppercase;
         @include tablet {
-            text-align: center;
+            margin: 0 auto;
             @include font(21px, 21px, 700);
             padding-bottom: 25px;
         }
     }
+    &__wrapper-title--center, &__wrapper-text--center {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    } 
     &__wrapper-text {
         @include font(14px, 21px, 400);
         color: #333333;
         text-transform: uppercase;
         @include tablet {
+            margin: 0 auto;
             text-align: center;
-            padding: 0 14px;
+            max-width: 192px;
+        }
+        @include desktop {
+            max-width: 298px;
         }
     }
     &__plus-mini {

@@ -33,9 +33,25 @@
         }
     }
     &__item {
+        position: relative;
         margin-left: 6px;
         @include box (46px, 48px);
         background-color: $font-color;
+        &:hover {
+            background-color: #669EC0;
+        }
+        &:active {
+            background-color: #5496BD;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include box (46px, 48px);
+                background-color: #5496BD;;
+                opacity: .3;
+            }
+        }
     }
     &__item-img {
         display: block;
@@ -48,13 +64,20 @@
         align-items: center;
     }
     &__html-title {
+        position: relative;
         text-align: center;
         text-transform: uppercase;
         @include font(14px, 26px, 400);
         color: $third-color;
         margin-right: 10px;
     }
-    &__html-img {
+    &__html {
         object-fit: contain;
+        &:hover {
+            background-image: url(/img/htmlacademy-hover.svg);
+        }
+        &:active {
+            background-image:url(/img/htmlacademy-active.svg)
+        }
     }
 }

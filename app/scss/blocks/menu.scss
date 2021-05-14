@@ -11,22 +11,6 @@
         top: 0;
         transform: translateX(-50%);
         z-index: 3;
-        &:after {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-            content: "";
-            display: block;
-            @include box (102px, 84px);
-            background: url(../img/logo.svg) no-repeat center center/cover ; 
-        }
-    }
-    &__logo-img{
-        display: none;
-        @include desktop {
-            display: block;
-        }
     }
     &__burger {
         display: flex;
@@ -37,30 +21,35 @@
         align-items: center;
         justify-content: center;
         flex-direction: column; 
-        :first-child {
+        &:first-child {
             margin-top: 0;
         }
         @include tablet {
             display: none;
         }
     }
+    &__burger--active {
+        z-index: 10;
+        background-color: $font-color;
+    }
     &__burger-liner {
-        @include box (22px, 4px);
+        @include box (26px, 4px);
         display: block;
         margin-top: 5px;
         background-color: $font-color;
     }
-    &__burger-liner-active {
-        margin-bottom: -2px;
-        &:nth-child(1) {
-            transform: translateY(3px) rotate(-45deg);
+    &__burger-liner--active {
+        z-index: 10;
+        background-color: $second-color;
+        &:nth-child(1){
+            transform: translateY(3px) rotate(-45deg)
         }
-        &:nth-child(2) { 
-            display: none;
+        &:nth-child(2){
+            display: none
         }
-        &:nth-child(3) {
-            transform: translateY(3px) rotate(45deg);
-        }    
+        &:nth-child(3){
+            transform: translateY(-6px) rotate(43deg)  
+        }
     }
     &__nav {
         position: absolute;
@@ -85,6 +74,8 @@
         display: block;
         opacity: 1;
         transform: translateX(0);
+        top: 0;
+        z-index: 9;
     }
     &__list {
         position: relative;
@@ -151,6 +142,13 @@
             @include font(14px, 26px,700);
             color: $third-color;
             padding: 15px 11px 14px 9px;
+        &:hover {
+            color: $font-color;
+        }
+        &:active {
+            color: $third-color;
+            opacity: 0.3;
+        }
         }
     }
     &__link-empty {
