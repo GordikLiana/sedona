@@ -1,0 +1,15 @@
+.footer {
+    &__map{
+        display: none;
+    }
+    &__wrapper {
+        padding: 8px 60px 36px 60px;
+        @include tablet {
+            padding-top: 67px;
+        }
+        @include desktop {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+}

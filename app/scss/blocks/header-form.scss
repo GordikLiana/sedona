@@ -1,0 +1,18 @@
+.header {
+    &__img--form {
+        background-position: bottom;
+        background-size: auto;
+        padding: 52px 46px 67px 46px;
+        @include tablet {
+            padding: 95px 114px 117px 117px;
+        }
+    }
+    &__img-text--form {
+        width: auto;
+        background: url(../img/text-sedona.svg) no-repeat center center/contain;
+        height: 39px;
+        @include tablet {
+            height: 77px;
+        }
+    }
+}

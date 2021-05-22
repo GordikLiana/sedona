@@ -1,0 +1,90 @@
+<section class="input">
+    <div class="container">
+        <div class="reasons__head reasons__head--form">
+            <h1 class="reasons__title reasons__title--form">Оставьте свой отзыв</h1>
+            <p class="reasons__five reasons__five--form">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br class="reasons__none"> а также о посещенных вами достопримечательностях</p>
+        </div>
+        <div class="field__wrapper">
+            <fieldset class="field field--first">
+                <legend class="field__title">Представьтесь:</legend>
+                <div class="field__input">
+                    <label class="field__subtitle" for="field-name">ИМЯ*:</label>
+                    <input class="field__item" name="field-name" id="field-name" type="text" placeholder="Петр">
+                </div>
+                <div class="field__input">
+                    <label class="field__subtitle" for="field-surname">ФАМИЛИЯ*:</label>
+                    <input class="field__item" name="field-surname" id="field-surname" type="text" placeholder="Иванов">
+                </div>
+                <div class="field__input">
+                    <label class="field__subtitle" for="field-middle">ОТЧЕСТВО:</label>
+                    <input class="field__item" name="field-middle" id="field-middle" type="text" placeholder="Александрович">
+                </div>
+                </fieldset>
+                <fieldset class="field field--liner">
+                    <legend class="field__title  field__title--center">Контактная информация:</legend>
+                    <div class="field__wrapper-info">
+                        <div class="field__input field__input--info">
+                            <label class="field__subtitle field__subtitle--info" for="field-tell">Контактный телефон*:</label>
+                            <input class="field__item field__item--info" name="field-tell" id="field-tell" type="text" placeholder="Введите телефон">
+                            <button class="field__btn" type="submit">
+                                <img src="/img/phone.svg" alt="" class="field__img">
+                            </button>
+                        </div>
+                        <div class="field__input field__input--info">
+                            <label class="field__subtitle field__subtitle--info" for="field-post">Электронная почта*:</label>
+                            <input class="field__item field__item--info" name="field-post" id="field-post" type="text" placeholder="Введите e-mail">
+                            <button class="field__btn" type="submit">
+                                <img src="/img/mail.svg" alt="" class="field__img">
+                            </button>
+                        </div>
+                    </div>
+            </fieldset>
+            <fieldset class="field field--second">
+                <legend class="field__title field__title--desktop">ВАше Общее впечатление:</legend>
+                <div class="field__input">
+                    <input class="field__circle" name="field-feedback" id="field-positive" type="radio">
+                    <label class="field__item field__item--feedback" for="field-positive">Скорее положительное</label>
+                </div>
+                <div class="field__input">
+                    <input class="field__circle" name="field-feedback" id="field-negative" type="radio">
+                    <label class="field__item field__item--feedback" for="field-negative">Скорее отрицательное</label>
+                </div>
+                <div class="field__input">
+                    <input class="field__circle" name="field-feedback" id="field-difficult" type="radio">
+                    <label class="field__item field__item--feedback" for="field-difficult">Затрудняюсь ответить</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="field__last">
+            <fieldset class="field field--liner">
+                <legend class="field__title field__title--center">посещенные <br> достопримечательности:</legend>
+                <div class="field__wrapper field__wrapper--sight">
+                    <div class="field__input field__input--sight">
+                        <input class="field__circle field__circle--square" name="field-tell" id="field-bridge" type="checkbox">
+                        <label class="field__item field__item--feedback" for="field-bridge">Мост Дьявола</label>
+                    </div>
+                    <div class="field__input field__input--sight">
+                        <input class="field__circle field__circle--square" name="field-post" id="field-mountain" type="checkbox">
+                        <label class="field__item field__item--feedback" for="field-mountain">Гора-Колокол</label>
+                    </div>
+                    <div class="field__input field__input--sight">
+                        <input class="field__circle field__circle--square" name="field-post" id="field-park" type="checkbox">
+                        <label class="field__item field__item--feedback" for="field-park">Слайд-парк</label>
+                    </div>
+                    <div class="field__input field__input--sight">
+                        <input class="field__circle field__circle--square" name="field-post" id="field-rock" type="checkbox">
+                        <label class="field__item field__item--feedback" for="field-rock">Красные скалы</label>
+                    </div>
+                </div>
+            </fieldset>
+            <form class="field field--liner" action="#" method="post">
+                <label class="field__title field__title--form field__title--center" for="field-emotions">Опишите свои эмоции:</label>
+                <p><textarea class="field__item field__item--form" rows="10" cols="45" name="text">Опишите подробно все свои восторги</textarea></p>
+                <div class="field__wrapper-required">
+                    <p><input class="field__send" type="submit" value="ОТПРАВИТЬ ОТЗЫВ"></p>
+                <p class="field__required">* — обязательные поля</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -72,12 +72,12 @@
         margin-right: 10px;
     }
     &__html {
-        object-fit: contain;
         &:hover {
-            background-image: url(/img/htmlacademy-hover.svg);
+            fill: $font-color;
         }
         &:active {
-            background-image:url(/img/htmlacademy-active.svg)
+            fill: $third-color;
+            opacity: 0.3;
         }
     }
 }
