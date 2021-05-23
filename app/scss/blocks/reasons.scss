@@ -171,7 +171,7 @@
     }
     &__plus {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         padding: 0 20px;
         &:first-child {
             padding-top: 9px;
@@ -231,17 +231,11 @@
             max-width: 298px;
         }
     }
-    &__plus-mini {
-        padding-top: 15px;
-        padding-bottom: 26px;
+    &__plus-img {
+        @include box (39px, 36px);
         @include tablet {
-            display: none;
-        }
-    }
-    &__plus-normal {
-        display: none;
-        @include tablet {
-            display: block;
+            @include box (75px, 75px);
+            padding: 0;
             margin: auto;
         }
     }
