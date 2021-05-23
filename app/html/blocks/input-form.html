@@ -26,15 +26,14 @@
                 <legend class="field__title  field__title--center">Контактная информация:</legend>
                 <div class="field__wrapper-info">
                     <div class="field__info">
-                        <label class="field__subtitle field__subtitle--info" for="field-tell"><span class="field__none">Контактный</span>
-                            телефон*:</label>
+                        <label class="field__subtitle field__subtitle--info" for="field-tell"><span class="field__none">Контактный</span>телефон*:</label>
                         <input class="field__item-info" name="field-tell" id="field-tell" type="text"
                             placeholder="Введите телефон">
                     </div>
                     <div class="field__info">
                         <label class="field__subtitle field__subtitle--info" for="field-post">Электронная
                             почта*:</label>
-                        <input class="field__item-info" name="field-post" id="field-post" type="text"
+                        <input class="field__item-info field__item-info--mail" name="field-post" id="field-post" type="text"
                             placeholder="Введите e-mail">
                     </div>
                 </div>
@@ -49,12 +48,12 @@
                 <label class="field__feedback">
                     <input class="field__circle" name="field-feedback" id="field-positive" hidden type="radio">
                     <span class="field__check" for="field-positive"></span>
-                    <span class="field__feedback-text" for="field-positive">Затрудняюсь ответить</span>
+                    <span class="field__feedback-text" for="field-positive">Скорее отрицательное</span>
                 </label>
                 <label class="field__feedback">
-                    <input class="field__circle" name="field-feedback" id="field-positive" hidden type="radio">
+                    <input disabled class="field__circle" name="field-feedback" id="field-positive" hidden type="radio">
                     <span class="field__check" for="field-positive"></span>
-                    <span class="field__feedback-text" for="field-positive">Скорее положительное</span>
+                    <span class="field__feedback-text" for="field-positive">Затрудняюсь ответить</span>
                 </label>
             </fieldset>
             <fieldset class="field field--4">
@@ -79,7 +78,7 @@
                         <span class="field__feedback-text" for="field-positive">Слайд-парк</span>
                     </label>
                     <label class="field__feedback field__feedback--width">
-                        <input class="field__circle" name="field-feedback" id="field-positive" hidden type="checkbox">
+                        <input disabled class="field__circle" name="field-feedback" id="field-positive" hidden type="checkbox">
                         <span class="field__check field__check--square" for="field-positive"></span>
                         <span class="field__feedback-text" for="field-positive">Красные скалы</span>
                     </label>
