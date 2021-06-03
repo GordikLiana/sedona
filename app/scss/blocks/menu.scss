@@ -67,6 +67,10 @@
             top: 0;
             background-color: $second-color;
         }
+        @include desktop {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
     }
     &__nav--active {
         display: block;
