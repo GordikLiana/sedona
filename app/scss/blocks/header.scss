@@ -1,3 +1,166 @@
+.menu {
+    &__wrapper{
+        margin-bottom: 56px;
+    }
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+    &__burger {
+        display: flex;
+        position: absolute;
+        z-index: 10;
+        border: 0;
+        top: 11px;
+        right: 16px;
+        background-color: $second-color;
+        @include box (32px);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        &:first-child {
+            margin-top: 0;
+        }
+        @include tablet {
+            display: none;
+        }
+    }
+    &__burger--active {
+        z-index: 10;
+        background-color: $font-color;
+    }
+    &__burger-liner {
+        @include box (26px, 4px);
+        display: block;
+        margin-top: 5px;
+        background-color: $font-color;
+    }
+    &__burger-liner--active {
+        z-index: 10;
+        background-color: $second-color;
+        &:nth-child(1){
+            transform: translateY(3px) rotate(-45deg)
+        }
+        &:nth-child(2){
+            display: none
+        }
+        &:nth-child(3){
+            transform: translateY(-6px) rotate(43deg)  
+        }
+    }
+    &__nav {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        top: 56px;
+        right: 0;  
+        left: 0;
+        background-color: $font-color;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity .2s ease-in, transform .2s ease-in;
+        @include tablet {
+            display: block;
+            opacity: 1;
+            transform: translateX(0);
+            top: 0;
+            background-color: $second-color;
+        }
+        @include desktop {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+    }
+    &__nav--active {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+        top: 0;
+        z-index: 9;
+    }
+    &__list {
+        position: relative;
+        width: 100%;
+        list-style-type: none; 
+        display: block;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 7px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+        }
+    }
+    &__list:after {
+        @include tablet{
+            display: none;
+        }
+    }
+    &__item {
+        position: relative;
+        @include tablet {
+            width: 20%;
+            flex-shrink: 0;
+            flex-grow: 1;
+            &:nth-child(2) {
+                margin-right: 20%;
+            }
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid $font-color;
+            box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+        } 
+    }
+    &__item:after {
+        @include tablet{
+            display: none;
+        }
+    }
+    &__item:last-child:after {
+        display: none;
+    }
+    &__link {
+        display: block;
+        text-align: center;
+        padding: 10px 0 5px 0;
+        @include font(18px, 40px, 700);
+        text-transform: uppercase;
+        color: $second-color;
+        text-decoration: none; 
+        @include tablet {
+            @include font(14px, 26px,700);
+            color: $third-color;
+            padding: 15px 11px 14px 9px;
+        &:hover {
+            color: $font-color;
+        }
+        &:active {
+            color: $third-color;
+            opacity: 0.3;
+        }
+        }
+    }
+    &__link-empty {
+        @include mobile {
+            display: none;
+        }
+    }
+}
 .header {
     position: relative;
     &:after {
