@@ -26,15 +26,16 @@
                 <legend class="field__title  field__title--center">Контактная информация:</legend>
                 <div class="field__wrapper-info">
                     <div class="field__info">
-                        <label class="field__subtitle field__subtitle--info" for="field-tell"><span class="field__none">Контактный</span>телефон*:</label>
+                        <label class="field__subtitle field__subtitle--info" for="field-tell"><span
+                                class="field__none">Контактный</span>телефон*:</label>
                         <input class="field__item field__item--info" name="field-tell" id="field-tell" type="text"
                             placeholder="Введите телефон">
                     </div>
                     <div class="field__info">
                         <label class="field__subtitle field__subtitle--info" for="field-post">Электронная
                             почта*:</label>
-                        <input class="field__item field__item--info field__item-info--mail" name="field-post" id="field-post" type="text"
-                            placeholder="Введите e-mail">
+                        <input class="field__item field__item--info field__item-info--mail" name="field-post"
+                            id="field-post" type="text" placeholder="Введите e-mail">
                     </div>
                 </div>
             </fieldset>
@@ -78,7 +79,8 @@
                         <span class="field__feedback-text" for="field-positive">Слайд-парк</span>
                     </label>
                     <label class="field__feedback field__feedback--width">
-                        <input disabled class="field__circle" name="field-feedback" id="field-positive" hidden type="checkbox">
+                        <input disabled class="field__circle" name="field-feedback" id="field-positive" hidden
+                            type="checkbox">
                         <span class="field__check field__check--square" for="field-positive"></span>
                         <span class="field__feedback-text" for="field-positive">Красные скалы</span>
                     </label>
@@ -86,14 +88,18 @@
             </fieldset>
             <fieldset class="field field--5">
                 <legend class="field__title field__title--center">Опишите свои эмоции:</legend>
-                <textarea class="field__form" rows="10" cols="45"
-                        name="text" placeholder="Опишите подробно все свои восторги"></textarea>
+                <textarea class="field__form" rows="10" cols="45" name="text"
+                    placeholder="Опишите подробно все свои восторги"></textarea>
                 <div class="field__wrapper-required">
                     <input class="field__send" type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
                     <p class="field__required">* — обязательные поля</p>
                 </div>
             </fieldset>
+            <div class="field__window">
+                <p class="field__something">Что-то пошло не так!</p>
+                <p class="field__red">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+                <button class="field__error">ок</button>
+            </div>
         </form>
-    </div>
     </div>
 </section>

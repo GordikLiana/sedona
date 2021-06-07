@@ -8,6 +8,7 @@
         border-bottom: 1px solid #e5e5e5;
         padding-bottom: 16px;
         @include tablet {
+            padding-top: 65px;
             padding-bottom: 61px;
             border-bottom: none;
         }
@@ -44,6 +45,7 @@
         }
     }
     &__wrapper {
+        position: relative;
         padding: 0 20px;
         @include tablet {
             display: flex;
@@ -363,5 +365,41 @@
         @include tablet {
             display: block;
         }
+    }
+    &__window {
+        display: none;
+        position: absolute;
+        bottom: 180px;
+        left: 185px;
+        width: 400px;
+        background-color: $second-color;
+        box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    }
+    &__window--active{
+        display: block;
+    }
+    &__something {
+        @include font(30px, 40px, 700);
+        padding: 52px 73px 22px 73px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__red {
+        @include font(14px, 24px, 400);
+        padding: 0 60px 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__error {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        width: 272px;
+        height: 58px;
+        text-transform: uppercase;
+        border: none;
+        color: $second-color;
+        @include font(21px, 26px, 700);
+        background-color: $font-color;
     }
 }
