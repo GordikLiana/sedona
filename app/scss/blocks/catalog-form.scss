@@ -1,15 +1,34 @@
-.reasons {
-    &__five--catalog {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    &__head--catalog {
-        @include desktop {
-            padding-top: 105px;
+.catalog {
+    &__title-head{
+        padding: 0 11px;
+        @include font(18px, 26px, 700);
+        text-transform: uppercase;
+        text-align: center;
+        color: $third-color;
+        @include tablet {
+            @include font(30px, 26px, 700);
         }
     }
-}
-.catalog {
+    &__head {
+        background-color: $second-color;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 32px 20px 16px 20px;
+        @include tablet {
+            padding: 65px 20px 61px 20px;
+            border-bottom: none;
+        }
+        @include desktop {
+            padding: 105px 20px 56px 20px;
+        }
+    }
+    &__five-head {
+        padding: 35px 10px 0;
+        padding-top: 35px;
+        @include font(14px, 26px, 400);
+        text-transform: uppercase;
+        text-align: center;
+        color: #333333;
+    }
     &__wrapper {
         padding-left: 20px;
         padding-right: 20px;
@@ -188,8 +207,6 @@
     }
     &__replay {
         fill: #5c6870;
-        margin-left: 25px;
-        margin: 22px 0 24px 25px;
         &:hover {
             fill: #333333;
         }
@@ -198,7 +215,7 @@
             opacity: 0.3;
         }
         @include tablet {
-            margin-left: 35px;
+            margin-left: 20px;
             fill: $second-color;
             &:hover {
                 fill: $second-color;
@@ -211,13 +228,11 @@
         }
     }
     &__right {
-        margin-right: 23px;
         @include tablet {
             margin-right: 35px;
         }
     }
     &__subtitles {
-        margin-right: 31px;
         fill: #5c6870;
         &:hover {
             fill: #333333;
@@ -285,6 +300,12 @@
             opacity: 0.3;
         }
     }
-
+    &__btn-1, &__btn-2, &__btn-3 {
+        position: relative;
+        z-index: 3;
+        padding: 15px 15px;
+        background-color: transparent;
+        border: none;
+    }
 }
 

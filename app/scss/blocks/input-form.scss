@@ -1,42 +1,53 @@
-.reasons {
-    &__title--form {
+.field {
+    &__title-head{
+        padding: 0 11px;
+        @include font(18px, 26px, 700);
+        text-transform: uppercase;
+        text-align: center;
+        color: $third-color;
         @include tablet {
             @include font(30px, 26px, 700);
         }
     }
-    &__head--form {
+    &__head {
+        background-color: $second-color;
         border-bottom: 1px solid #e5e5e5;
-        padding-bottom: 16px;
+        padding: 32px 20px 16px 20px;
         @include tablet {
-            padding-top: 65px;
-            padding-bottom: 61px;
+            padding: 65px 20px 61px 20px;
             border-bottom: none;
         }
         @include desktop {
-            padding-bottom: 56px;
+            padding: 55px 20px 56px 20px;
         }
     }
-}
-
-.field {
-    position: relative;
-    border: none;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-    @include tablet {
-        padding: 20px 0;
+    &__five-head {
+        padding-top: 35px;
+        @include font(14px, 26px, 400);
+        text-transform: uppercase;
+        text-align: center;
+        color: #333333;
     }
-    @include desktop {
-        padding-top: 38px;
-    }
-    &:last-child {
-        border-bottom: none;
-    }
-    @include tablet {
-        &:nth-child(1),
-        &:nth-child(3) {
+    &__form{
+        position: relative;
+        border: none;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        @include tablet {
+            padding: 20px 0;
+        }
+        @include desktop {
+            padding-top: 38px;
+        }
+        &:last-child {
             border-bottom: none;
-            border-top: none;
+        }
+        @include tablet {
+            &:nth-child(1),
+            &:nth-child(3) {
+                border-bottom: none;
+                border-top: none;
+            }
         }
     }
     &__none{
@@ -67,14 +78,14 @@
             padding: 0;
         }
     }
-    &--1 {
+    &__form--1 {
         @include tablet {
             order: 2;
             width: 50%;
             padding-left: 58px;
         }
     }
-    &--3 {
+    &__form--3 {
         @include tablet {
             order: 1;
             width: 50%;
@@ -88,9 +99,9 @@
             }
         }
     }
-    &--2,
-    &--4,
-    &--5 {
+    &__form--2,
+    &__form--4,
+    &__form--5 {
         @include tablet {
             border-top: 1px solid #e5e5e5;
             order: 3;
@@ -177,28 +188,28 @@
             padding-right: 67px;
         }
     }
-    &__item-info--mail {
+    &__item--mail {
         background: url(../img/mail.svg) no-repeat right 0 center/58px 58px;
         background-color: #f2f2f2;
     }
     &__item::-webkit-input-placeholder,
     &__item-info::-webkit-input-placeholder,
-    &__form::-webkit-input-placeholder {
+    &__form-text::-webkit-input-placeholder {
         color: $third-color;
     }
     &__item::-moz-placeholder,
     &__item-info::-moz-placeholder,
-    &__form::-moz-placeholder {
+    &__form-text::-moz-placeholder {
         color: $third-color;
     }
     &__item:-moz-placeholder,
     &__item-info:-moz-placeholder,
-    &__form:-moz-placeholder {
+    &__form-text:-moz-placeholder {
         color: $third-color;
     }
     &__item:-ms-input-placeholder,
     &__item-info:-ms-input-placeholder,
-    &__form:-ms-input-placeholder {
+    &__form-text:-ms-input-placeholder {
         color: $third-color;
     }
     &__subtitle--info {
@@ -275,15 +286,12 @@
     &__feedback-text {
         @include font(18px, 26px, 700);
     }
-    &__form {
+    &__form-text {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 51px;
         resize: none;
-        padding-top: 13px;
-        padding-left: 21px;
-        padding-right: 15px;
-        margin-bottom: 51px;
-        @include box(279px, 160px);
+        padding: 13px 15px 51px;
+        @include box(100%, 160px);
         background: #f2f2f2;
         @include font(18px, 26px, 700);
         border: none;
@@ -294,12 +302,6 @@
         &:focus {
             background-color: $second-color;
             box-shadow: inset 0 0 0 4px #E5E5E5;
-        }
-        @include tablet {
-            width: 648px;
-        }
-        @include desktop {
-            width: 960px;
         }
     }
     &__item-info {
@@ -317,6 +319,7 @@
         display: block;
         margin: 0 auto;
         margin-bottom: 48px;
+        cursor: pointer; 
         @include tablet {
             width: 324px;
             margin: 0;

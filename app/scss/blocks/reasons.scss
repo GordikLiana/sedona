@@ -43,6 +43,18 @@
             width: 48%;
         }
     }
+    &__blue--before{
+        position: relative;
+        &:before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -30px;
+            content: "";
+            height: 57px;
+            // background: url(../img/down.svg) no-repeat center center ; 
+        }
+    }
     &__blue--down {
         padding: 39px 20px 35px 20px;
         @include tablet {

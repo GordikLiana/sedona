@@ -1,16 +1,16 @@
 <section class="catalog">
     <div class="container">
-        <div class="reasons__head reasons__head--form reasons__head--catalog">
-            <h1 class="reasons__title reasons__title--form">Фото и видео</h1>
-            <p class="reasons__five reasons__five--form reasons__five--catalog">Не можете решиться на путешествие из-за
-                курса? <br class="reasons__none"> Фотографии помогут вам забыть о политике и экономике</p>
+        <div class="catalog__head">
+            <h1 class="catalog__title-head">Фото и видео</h1>
+            <p class="catalog__five-head">Не можете решиться на путешествие из-за
+                курса? <br class="catalog__none"> Фотографии помогут вам забыть о политике и экономике</p>
         </div>
         <div class="catalog__wrapper">
             <div class="catalog__item catalog__item--1">
                 <img src="img/way.jpg" alt="way" class="catalog__img catalog__img--1">
                 <div class="catalog__describe">
                     <div class="catalog__author">
-                        <h4 class="catalog__title">неродные просторы</h4>
+                        <h2 class="catalog__title">неродные просторы</h2>
                         <p class="catalog__name">Автор фото: Борис</p>
                     </div>
                     <div class="catalog__like">
@@ -25,7 +25,7 @@
                 <img src="img/tree.jpg" alt="tree" class="catalog__img">
                 <div class="catalog__describe">
                     <div class="catalog__author">
-                        <h4 class="catalog__title">Местная растительность</h4>
+                        <h2 class="catalog__title">Местная растительность</h2>
                         <p class="catalog__name">Автор фото: Сергей</p>
                     </div>
                     <div class="catalog__like">
@@ -40,7 +40,7 @@
                 <img src="img/forest.jpg" alt="forest" class="catalog__img">
                 <div class="catalog__describe catalog__describe--color">
                     <div class="catalog__author">
-                        <h4 class="catalog__title">Дорога на север</h4>
+                        <h2 class="catalog__title">Дорога на север</h2>
                         <p class="catalog__name">Автор фото: Петр</p>
                     </div>
                     <div class="catalog__like">
@@ -55,7 +55,7 @@
                 <img src="img/bridge-mini.jpg" alt="bridge" class="catalog__img">
                 <div class="catalog__describe">
                     <div class="catalog__author">
-                        <h4 class="catalog__title">Мост дьявола</h4>
+                        <h2 class="catalog__title">Мост дьявола</h2>
                         <p class="catalog__name">Автор фото: Антон</p>
                     </div>
                     <div class="catalog__like">
@@ -67,28 +67,34 @@
                 </div>
             </div>
         </div>
-        <div class="reasons__head reasons__head--form">
-            <h1 class="reasons__title reasons__title--form">Все еще сомневаетесь?</h1>
-            <p class="reasons__five reasons__five--form">Смотрите видеопрезентацию и скорее за билетами, пока они<br
-                    class="reasons__none"> не подорожали в очередной раз!</p>
+        <div class="catalog__head">
+            <h3 class="catalog__title-head">Все еще сомневаетесь?</h3>
+            <p class="catalog__five-head">Смотрите видеопрезентацию и скорее за билетами, пока они<br
+                    class="catalog__none"> не подорожали в очередной раз!</p>
         </div>
     </div>
     <div class="catalog__doubt">
         <img src="img/video.jpg" alt="video" class="catalog__video-img">
         <div class="catalog__video">
-            <svg class="catalog__replay" width="16" height="20">
-                <use xlink:href="#icon-replay"></use>
-            </svg>
+            <button class="catalog__btn-1">
+                <svg class="catalog__replay" width="16" height="20">
+                    <use xlink:href="#icon-replay"></use>
+                </svg>
+            </button>
             <div class="catalog__player">
                 <div class="catalog__liner"></div>
             </div>
             <div class="catalog__right">
-                <svg class="catalog__subtitles" width="32" height="20">
-                    <use xlink:href="#icon-subtitles"></use>
-                </svg>
-                <svg class="catalog__fullscreen" width="20" height="20">
-                    <use xlink:href="#icon-fullscreen"></use>
-                </svg>
+                <button class="catalog__btn-2">
+                    <svg class="catalog__subtitles" width="32" height="20">
+                        <use xlink:href="#icon-subtitles"></use>
+                    </svg>
+                </button>
+                <button class="catalog__btn-3">
+                    <svg class="catalog__fullscreen" width="20" height="20">
+                        <use xlink:href="#icon-fullscreen"></use>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
